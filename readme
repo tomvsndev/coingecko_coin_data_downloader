@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 CoinGecko Coin Data Downloader
 
 This Python script fetches cryptocurrency data from the CoinGecko API, processes the data, downloads images, and saves the results locally in JSON format. It supports handling rate limits by implementing retries with exponential backoff. Additionally, it can filter and download data based on matching Binance symbols and handle various coins that do not match the Binance list.
@@ -21,3 +22,31 @@ You can install the necessary dependencies by running:
 
 pip install aiohttp aiofiles
 python coingecko_coin_data_downloader.py
+=======
+# CoinGecko Coin Data Downloader
+
+This Python script fetches cryptocurrency data from the CoinGecko API, processes the data, downloads images, and saves the results locally in JSON format. It supports handling rate limits by implementing retries with exponential backoff. Additionally, it can filter and download data based on matching Binance symbols and handle various coins that do not match the Binance list.
+
+## Features
+
+- **Fetch Coin Data**: Retrieves data for cryptocurrencies (e.g., description, image, etc.) from CoinGecko.
+- **Image Downloading**: Downloads images for each coin (thumb, small, large) and saves them to a specified directory.
+- **Rate Limiting**: Implements rate-limiting with retries to ensure that the script complies with CoinGecko’s rate limits (e.g., retry after a 429 status code).
+- **Binance Symbols Filtering**: Filters out and processes only coins that match Binance's supported symbols.
+- **Data Storage**: Saves data and images for each coin to a local directory in JSON and image formats.
+
+## Requirements
+
+- Python 3.7+
+- `aiohttp` for asynchronous HTTP requests
+- `aiofiles` for asynchronous file handling
+- `json` for saving and reading coin data
+- `os`, `time`, `random`, and `datetime` for managing file paths, delays, and retries
+
+You can install the necessary dependencies by running:
+
+```bash
+pip install aiohttp aiofiles
+python coingecko_coin_data_downloader.py
+
+ 
